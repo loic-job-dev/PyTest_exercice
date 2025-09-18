@@ -1,12 +1,20 @@
-alphabet = ('a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',)
+import string
+alphabet = {letter: index for index, letter in enumerate(string.ascii_lowercase, start=1)}
 
 def diamond(test) -> str:
+    param = test.lower()
+    index = alphabet[param]
+    referenceBoucle = 0
     result = ""
-    for letter in alphabet:
-        if letter == test:
-            result+=test
-        else:
-            result+=" "
+
+    while (referenceBoucle < index):
+        for letter in alphabet:
+            if letter == param:
+                result+=param
+                print(index)
+            else:
+                result+=" "
+        referenceBoucle+=1
     return result
 
 print(diamond('d'))
