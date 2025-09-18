@@ -15,7 +15,6 @@ def diamond(test) -> str:
 
     reversed_letters.reverse()
 
-    print(letters)
     while reference_boucle <= index*2-1:
         while reference_alphabet <= index: #Permet de boucler jusqu'à la lettre voulue
 
@@ -25,7 +24,7 @@ def diamond(test) -> str:
                 else:
                     result+=" "
 
-            for letter in letters:
+            for letter in letters[1:]:
                 if letter == inverse_alphabet[reference_alphabet]:
                     result+=letter
                 else:
@@ -43,7 +42,7 @@ def diamond(test) -> str:
                 else:
                     result+=" "
 
-            for letter in letters:
+            for letter in letters[1:]:
                 if letter == inverse_alphabet[reference_alphabet]:
                     result+=letter
                 else:
@@ -52,8 +51,6 @@ def diamond(test) -> str:
             reference_alphabet-=1
             result += "\n"
             reference_boucle+=1
-
-    result+="fin de boucle"
 
     return result
 
