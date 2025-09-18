@@ -2,4 +2,4 @@
 
 ## Contributeurs :
 - Loïc
-- -Léa
+- Léa
