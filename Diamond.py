@@ -54,4 +54,4 @@ def diamond(test) -> str:
 
     return result
 
-print(diamond('d'))
+print(diamond('z'))
